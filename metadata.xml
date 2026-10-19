@@ -2,6 +2,7 @@
 <metadata>
 	<name>  Mod Fixes &amp; Speedups</name>
 	<directory>modfixes</directory>
+	<id>3822877566</id>
 	<description>[h1]Mod Fixes &amp; Speedups[/h1]
 Fixes for crashes and errors that happen when big mods are installed together, plus a few speedups. Everything is done at runtime from this mod's own folder: no files of other mods are changed, and every fix switches itself off if its mod isn't installed.
 
