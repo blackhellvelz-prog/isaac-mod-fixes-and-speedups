@@ -1,0 +1,4 @@
+<costumes anm2root="gfx/characters/">
+	<!-- седые волосы Порченого Моисея IPECAC (moses_b_hair.lua) -->
+	<costume anm2path="character_moses_b_hair.anm2" type="none" priority="99" />
+</costumes>

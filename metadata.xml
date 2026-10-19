@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<name>  Mod Fixes &amp; Speedups</name>
+	<directory>modfixes</directory>
+	<description>[h1]Mod Fixes &amp; Speedups[/h1]
+Fixes for crashes and errors that happen when big mods are installed together, plus a few speedups. Everything is done at runtime from this mod's own folder: no files of other mods are changed, and every fix switches itself off if its mod isn't installed.
+
+[h2]Speedups[/h2]
+[list]
+[*][b]Faster json.decode[/b] of the game's shared JSON module: mods with big save files (Passive Skill Trees and others) load and read saves noticeably faster.
+[*][b]Item lookup by name[/b]: Isaac.GetItemIdByName walks the whole item list on every call, and mods call it thousands of times while loading — now it is an index.
+[*][b]Custom Health API cache[/b] (Fiend Folio, Furtherance, Repentance Plus…): health getters are cached within a frame instead of a full resync on every call.
+[/list]
+
+[h2]Fixes[/h2]
+[list]
+[*]Crash when starting Greed / Greedier as Lilith with Fiend Folio and Reshaken (TSIL library).
+[*]Game enums (Achievement, LaserVariant, TearFlags…) overwritten by IPECAC during loading — restored.
+[*]IPECAC: the game could hang for minutes while loading mods (a grid scan of a room that doesn't exist yet); Lil Larry locked forever; error at the start of every run (&quot;IpecacMod is causing errors!&quot;); missing achievement pictures — drawn in the game's style; Tainted Moses was invisible — skin, white hair, portrait and name added; old Fiend Folio names for its compatibility code.
+[*]Fiend Folio: crash in the co-op fix when the player is re-created (Epiphany doors, restart).
+[*]Lost and Forgotten: errors from wisps outside a Robot run and from cursed pickups.
+[*]Reshaken (TSIL): player callbacks without a player at the start of a run.
+[*]Epiphany: Tarnished Eden in Greed mode picked items from missing pools.
+[*]Dead Sea Scrolls: the &quot;Pause&quot; item spam in every DSS menu (FPS drop while the menu is open) and the &quot;Invalid character&quot; log flood from mod texts.
+[*]Mod Translator: a typo that broke a Reshaken easter egg.
+[*]Mod Config Menu: the EID preview gets a dark backing so it doesn't overlap the menu text.
+[/list]
+
+[h2]Requirements[/h2]
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3127536138]REPENTOGON[/url]
+[/list]
+Useful with: Fiend Folio, IPECAC, Lost and Forgotten, Epiphany, Reshaken, Furtherance, Repentance Plus, Mod Translator, Encyclopedia, Passive Skill Trees, External Item Descriptions, Mod Config Menu. The name starts with two spaces so it loads before other mods.
+
+[h2]Links[/h2]
+Source code: [url=https://github.com/blackhellvelz-prog/isaac-mod-fixes-and-speedups]GitHub[/url]
+More from the same set: Basement Scrapbook Menu, Dead Sea Scrolls: Unrolled, Talents for Everyone, Peat, Isaac-Style, Russian Translation for Mods.
+
+Made with Universal Modder. Author: blackhellvelz.</description>
+	<version>1.0</version>
+	<visibility>Public</visibility>
+	<tag id="Lua"/>
+	<tag id="Tweaks"/>
+</metadata>
